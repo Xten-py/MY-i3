@@ -1,0 +1,54 @@
+# [bar/main]
+# width = 100%
+# height = 26
+# background = #222222
+# foreground = #ffffff
+# 
+# modules-left = i3
+# modules-right = date
+# 
+# font-0 = fixed
+# 
+# [module/date]
+# type = internal/date
+# interval = 1
+# date = %Y-%m-%d-%H:%M
+#    
+#########################################
+ 
+
+
+
+[bar/main]
+width = 100%
+height = 27
+#monitor = ${env:MONITOR}
+modules-left = i3
+modules-center = xwindow
+modules-right = date
+#bottom = false
+background = #00000000
+foreground = #ffffff
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+label-focused = %index%
+label-unfocused = %index%
+label-visible = %index%
+label-urgent = %index%
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/date]
+type = internal/date
+interval = 5
+date = %Y-%m-%d
+time = %H:%M
+label = %date% %time%
+
+[settings]
+screenchange-reload = true
+

@@ -1,0 +1,50 @@
+backend = "xrender";
+
+vysnc = true;
+
+#set shadow 
+shadow = true;
+#shadow-radius = 0.2;
+
+# dan chu
+fading = true;
+fade-in-step  = 0.02;
+fade-out-step = 0.02;
+
+
+
+# tou ming
+inactive-opacity = 0.9;
+active-opacity   = 0.96;
+frame-opacity    = 0.9;
+
+opacity-rule = [
+    "90:clas_g = 'Alacritty'"
+];
+
+# Rounde corner configuration
+
+corner-radius 	= 10;
+rounded-corners-exclude = [
+	"class_g = 'Polybar'",
+	"class_g = 'Rofi'"
+];
+# blurred background
+blur:
+{
+	mothod   = "dual_kawase";
+	strength = 5;
+};
+
+
+
+
+# Avoid problem windows
+wintypes:
+{
+	tooltip = { fade = true; shadow = false; opacity = 0.9; } ;
+	dock	= { shadow = false; } ;
+	dnd 	= { shadow = false; } ;
+};
+
+
